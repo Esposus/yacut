@@ -1,6 +1,6 @@
 from flask import jsonify, render_template
 
-from . import app, db
+from . import app
 from .models import URLMap
 
 
@@ -17,7 +17,7 @@ class InvalidAPIUsage(Exception):
         return dict(message=self.message)
 
 
-@app.errorhandler(InvalidAPIUsage) 
+@app.errorhandler(InvalidAPIUsage)
 def invalid_api_usage(error):
     return jsonify(error.to_dict()), error.status_code
 
