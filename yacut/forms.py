@@ -5,6 +5,7 @@ from wtforms.validators import DataRequired, Length, Optional, Regexp
 
 SYMBOLS_REGEXP = '^[a-zA_Z0-9]+$'
 
+
 class URLForm(FlaskForm):
     original_link = URLField(
         'Поле для ссылки',

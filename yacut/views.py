@@ -35,7 +35,7 @@ def main_page_view():
         form=form,
         short_url=BASE_URL + url.short,
         original_link=url.original
-        )
+    )
 
 
 @app.route('/<string:short>', methods=['GET'])
